@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- <link rel="stylesheet" href="{{asset('bs/css/bootstrap.min.css')}}"> --}}
     <link rel="stylesheet" href="{{asset('materialize/css/materialize.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
     {{-- <link rel="stylesheet" href="{{asset('bs/css/bootstrap-grid.min.css')}}"> --}}
     <script src="{{asset('materialize/js/materialize.min.js')}}"></script>
     <script src="{{asset('bs/js/jqry.min.js')}}"></script>
@@ -14,7 +15,7 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    
+<main>    
     {{-- menu --}}
 <nav>
         <div class="nav-wrapper">
@@ -42,11 +43,13 @@
           </li>
         </ul>
 
-        
-   <div id="wrapper">
+
+   <div id="wrapper" class="container">
                 @yield('content')
    </div>
-           
+   
+</main>
+
     {{-- footer --}}
     <footer class="page-footer">
         <div class="footer-copyright">
