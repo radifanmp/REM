@@ -14,7 +14,8 @@
     <title>@yield('title')</title>
 </head>
 <body>
-        {{-- menu --}}
+    
+    {{-- menu --}}
 <nav>
         <div class="nav-wrapper">
           <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -28,12 +29,7 @@
           </ul>
         </div>
 </nav>
-  
-    <div id="wrapper">
-        @yield('content')
-    </div>
-   
-  
+    
  {{-- jumbotron/section --}}
  <div class="slider">
         <ul class="slides">
@@ -46,6 +42,11 @@
           </li>
         </ul>
 
+        
+   <div id="wrapper">
+                @yield('content')
+   </div>
+           
     {{-- footer --}}
     <footer class="page-footer">
         <div class="footer-copyright">
