@@ -14,11 +14,7 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <div id="wrapper">
-        @yield('content')
-    </div>
-   
-    {{-- menu --}}
+        {{-- menu --}}
 <nav>
         <div class="nav-wrapper">
           <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -32,28 +28,19 @@
           </ul>
         </div>
 </nav>
-    
+  
+    <div id="wrapper">
+        @yield('content')
+    </div>
+   
+  
  {{-- jumbotron/section --}}
  <div class="slider">
         <ul class="slides">
           <li>
-          <img src="{{asset('img/jbtrn/jbtrn1.jpg')}}"> <!-- random image -->
+          <img src="{{asset('img/jbtrn/jbtrn2.jpg')}}"> <!-- random image -->
             <div class="caption center-align">
               <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
-          </li>
-          <li>
-            <img src="{{asset('img/jbtrn/jbtrn2.jpg')}}"> <!-- random image -->
-            <div class="caption left-align">
-              <h3>Left Aligned Caption</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
-          </li>
-          <li>
-            <img src="{{asset('img/jbtrn/jbtrn3.jpg')}}"> <!-- random image -->
-            <div class="caption right-align">
-              <h3>Right Aligned Caption</h3>
               <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
             </div>
           </li>
