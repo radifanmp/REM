@@ -29,8 +29,7 @@
           <li><a href="/daftar" >Daftar</a></li>
           </ul>
         </div>
-</nav>
-    
+</nav>  
  {{-- jumbotron/section --}}
  <div class="slider">
         <ul class="slides">
@@ -47,27 +46,23 @@
    <div id="wrapper" class="container">
                 @yield('content')
    </div>
-  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="blur-svg">
-      <defs>
-          <filter id="blur-filter">
-              <feGaussianBlur stdDeviation="3"></feGaussianBlur>
-          </filter>
-      </defs>
-  </svg>
+  
   <div id="overlay-login" class="blur">
   
   </div>
 </main>
 
     {{-- footer --}}
-    <footer class="page-footer">
-        <div class="footer-copyright">
-          <div class="container">
+<footer>
+    <div class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
           © 2014 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-          </div>
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
         </div>
-      </footer>
+      </div>
+    </div>
+</footer>
 
       {{-- slider jumbotron --}}
       <script>
