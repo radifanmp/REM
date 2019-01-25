@@ -17,6 +17,7 @@
     {{-- menu --}}
 <nav>
         <div class="nav-wrapper">
+          {{-- <div class="container"> --}}
           <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li><a href="/index">Home</a></li>
             <li><a href="/about">About</a></li>
@@ -26,6 +27,7 @@
           <li><a href="/login" >Login</a></li>
           <li><a href="/daftar" >Daftar</a></li>
           </ul>
+        {{-- </div> --}}
         </div>
 </nav>  
  {{-- jumbotron/section --}}
@@ -53,11 +55,11 @@
     {{-- footer --}}
 <footer>
     <div class="page-footer" style="background-color: #4D595D;">
-      <div class="footer-copyright" style="background-color: #2E3638;">
-        <div class="container" style="background-color: #2E3638;">
-          © 2014 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-        </div>
+      <div class="footer-copyright" style="background-color: #2E3638; padding: 0px 60px;">
+        {{-- <div class="container" style="background-color: #2E3638;"> --}}
+          © 2018 REM. ALL RIGHT RESERVED BY RADIFMP
+        <a class="grey-text text-lighten-4 right" href="https://materializecss.com">Thanks To Materialize</a>
+        {{-- </div> --}}
       </div>
     </div>
 </footer>

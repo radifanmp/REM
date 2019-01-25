@@ -23,10 +23,14 @@ nav {
   position: relative;
   /* background: rgba(0, 0, 0, 0.2); */
   background: #2E3638;
-  padding: 0px 20px;
+  padding: 0px 120px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
 footer {
   background: #2E3638;
+  background: #4D595D;
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
