@@ -21,11 +21,12 @@ main {
 
 nav {
   position: relative;
-  background: rgba(0, 0, 0, 0.2);
+  /* background: rgba(0, 0, 0, 0.2); */
+  background: #2E3638;
   padding: 0px 20px;
 }
 
 
 footer {
-  background-color: #212121;
+  background: #2E3638;
 }
