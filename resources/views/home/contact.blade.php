@@ -17,16 +17,36 @@
             <div class="row">
                 <form class="col s12">
                   <div class="row">
+
                     <div class="input-field col s6">
                       <i class="material-icons prefix">account_circle</i>
-                      <input id="icon_prefix" type="text" class="validate">
-                      <label for="icon_prefix">First Name</label>
+                      <input id="nama" type="text" class="validate">
+                      <label for="nama">Nama</label>
                     </div>
+
                     <div class="input-field col s6">
                       <i class="material-icons prefix">email</i>
-                      <input id="icon_email" type="email" class="validate">
-                      <label for="icon_email">Email</label>
+                      <input id="email" type="email" class="validate">
+                      <label for="email">Email</label>
+                      <span class="helper-text" data-error="Salah" data-success="Benar"></span>
                     </div>
+
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">error_outline</i>
+                        <input id="judul" type="text" class="validate">
+                        <label for="judul">Persoalan</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                            <i class="material-icons prefix">border_color</i>
+                            <textarea id="pesan" class="materialize-textarea"></textarea>
+                            <label for="pesan">Pesan</label>
+                    </div>
+
+                    <div class="row col s4">
+                     <button class="btn waves-effect waves-light s4" type="submit" name="kirim"  style="background-color: #2E3638; width: 100%;">Kirim</button>
+                    </div>
+
                   </div>
                 </form>
               </div>

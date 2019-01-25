@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{-- <link rel="stylesheet" href="{{asset('bs/css/bootstrap.min.css')}}"> --}}
     <link rel="stylesheet" href="{{asset('materialize/css/materialize.min.css')}}">
+    <link rel="stylesheet" href="{{asset('materialize/css/font.css')}}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
-    {{-- <link rel="stylesheet" href="{{asset('bs/css/bootstrap-grid.min.css')}}"> --}}
     <script src="{{asset('materialize/js/materialize.min.js')}}"></script>
     <script src="{{asset('bs/js/jqry.min.js')}}"></script>
-    {{-- <script src="{{asset('bs/js/bootstrap.min.js')}}"></script> --}}
 
     <title>@yield('title')</title>
 </head>
@@ -54,9 +52,9 @@
 
     {{-- footer --}}
 <footer>
-    <div class="page-footer">
-      <div class="footer-copyright">
-        <div class="container">
+    <div class="page-footer" style="background-color: #4D595D;">
+      <div class="footer-copyright" style="background-color: #2E3638;">
+        <div class="container" style="background-color: #2E3638;">
           © 2014 Copyright Text
         <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
         </div>
