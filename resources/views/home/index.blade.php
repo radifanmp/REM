@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('title',"Home")
+
 @section('content')
-    INDEX
+
+ 
+    </div>
 @endsection
