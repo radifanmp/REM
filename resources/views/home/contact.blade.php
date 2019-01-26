@@ -15,6 +15,23 @@
             Repudiandae asperiores aut officia id cum iste deserunt, natus ex est explicabo. In, ipsam, accusamus.</p>
             
             <div class="row">
+
+              {{-- contact --}}
+              <i class="small material-icons" style="color: #2E3638;">map</i><br>
+              <label style="font-size: 20px; color: #2E3638; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ALAMAT</label><br>
+              <p style="font-size: 12px; color: #2E3638; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Perum Griya Alam Sentosa
+              Brok R1 No 9 Cileungsi, Bogor</p><br>
+              
+              <i class="small material-icons" style="color: #2E3638;">local_phone</i><br>
+              <label style="font-size: 20px; color: #2E3638; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">TELEPON</label><br>
+              <p style="font-size: 12px; color: #2E3638; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">083896833133</p><br>
+
+              <i class="small material-icons" style="color: #2E3638;">mail_outline</i><br>
+              <label style="font-size: 20px; color: #2E3638; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">EMAIL</label><br>
+              <p style="font-size: 12px; color: #2E3638; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><a href="mailto:radifanmp@gmail.com?Subject=[FEEDBACK]" target="_top">radifamp@gmail.com</a></p>
+
+              {{-- form --}}
+
                 <form class="col s12">
                   <div class="row">
 
