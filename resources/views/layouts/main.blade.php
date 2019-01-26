@@ -55,10 +55,16 @@
     {{-- footer --}}
 <footer>
     <div class="page-footer" style="background-color: #4D595D;">
-      <div class="footer-copyright" style="background-color: #2E3638; padding: 0px 60px;">
+      <div class="left" style="background-color: #2E3638; padding:30px 30px 30px 30px;">
         {{-- <div class="container" style="background-color: #2E3638;"> --}}
-          © 2018 REM. ALL RIGHT RESERVED BY RADIFMP
-        <a class="grey-text text-lighten-4 right" href="https://materializecss.com">Thanks To Materialize</a>
+          © 2018 <b>REM</b>. ALL RIGHT RESERVED BY <b>RADIFMP</b>
+        </div>
+          <div class="grey-text text-lighten-4 right valign-wrapper" style="padding-top:20px;padding-right:30px">
+            Powered By&nbsp;&nbsp;
+            <img id="gambarLaravel" src="{{asset('img/ICON/Laravel-gray.png')}}" style="width:40px;height:40px" alt="" onmouseover="toogleLaravel(true)" onmouseout="toogleLaravel(false)">
+            &nbsp;&nbsp;
+            <img id="gambarMater" src="{{asset('img/ICON/Materialize-gray.png')}}" style="width:40px;height:40px" onmouseover="toogleMater(true)" onmouseout="toogleMater(false)" alt="">
+          </div>
         {{-- </div> --}}
       </div>
     </div>
@@ -75,6 +81,24 @@
               transition: 500,
               interval: 6000
           });
-     </script>
+
+          function toogleLaravel(state) {
+            if(state) {
+              $('#gambarLaravel').attr('src','{{asset("img/ICON/Laravel.png")}}');
+            }
+            else {
+              $('#gambarLaravel').attr('src','{{asset("img/ICON/Laravel-gray.png")}}');
+            }
+          }
+
+          function toogleMater(state) {
+            if(state) {
+              $('#gambarMater').attr('src','{{asset("img/ICON/Materialize.png")}}');
+            }
+            else {
+              $('#gambarMater').attr('src','{{asset("img/ICON/Materialize-gray.png")}}');
+            }
+          }
+      </script>
 </body>
 </html>
