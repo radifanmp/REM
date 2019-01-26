@@ -8,7 +8,7 @@
 
 </style>
     <h5 class="center-align" style="font-famly: Segoe UI;font-weight: 300;font-size:30px;">HUBUNGI KAMI</h5>
-    <hr class="style-one" style="margin-bottom:79px;">
+    <hr class="style-one"  style="margin-bottom:79px;">
 
     <p align="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Culpa ad reiciendis blanditiis similique fuga dolorum. 
@@ -84,7 +84,6 @@
                       <button class="btn waves-effect waves-light s4" type="submit" name="kirim"  style="background-color: #2E3638; width: 30%; border-radius:30px;">Kirim</button>
                     </div>
                   </div>
-
                   </div>
                 </form>
               </div>

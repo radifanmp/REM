@@ -44,10 +44,10 @@
         </ul>
 
 
-   <div id="wrapper" class="container">
-   <div class="row">
-   <div class="col s12">
-
+   
+   <div class="row" sty>
+    <div class="col s12">
+      <div id="wrapper" class="container" style="padding-bottom: 30px;"> 
       @yield('content')
   
    </div>
