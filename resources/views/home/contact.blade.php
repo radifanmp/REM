@@ -43,8 +43,8 @@
                             <label for="pesan">Pesan</label>
                     </div>
 
-                    <div class="row col s4">
-                     <button class="btn waves-effect waves-light s4" type="submit" name="kirim"  style="background-color: #2E3638; width: 100%;">Kirim</button>
+                    <div class="row col s12 center-align">
+                      <button class="btn waves-effect waves-light s4" type="submit" name="kirim"  style="background-color: #2E3638; width: 30%;border-radius:30px">Kirim</button>
                     </div>
 
                   </div>
