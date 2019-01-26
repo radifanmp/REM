@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="{{asset('materialize/css/materialize.min.css')}}">
     <link rel="stylesheet" href="{{asset('materialize/css/font.css')}}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
-    <script src="{{asset('materialize/js/materialize.min.js')}}"></script>
     <script src="{{asset('bs/js/jqry.min.js')}}"></script>
+    <script src="{{asset('materialize/js/materialize.min.js')}}"></script>
+
 
     <title>@yield('title')</title>
 </head>
@@ -24,7 +25,7 @@
             <li><a href="/contact">Contact</a></li>
           </ul>
           <ul id="nav-mobile2" class="right hide-on-med-and-down">
-          <li><a href="/login" >Login</a></li>
+          <li><a href="#login" class="modal-trigger">Login</a></li>
           <li><a href="/daftar" >Daftar</a></li>
           </ul>
         {{-- </div> --}}
@@ -44,13 +45,55 @@
 
 
    <div id="wrapper" class="container">
-                @yield('content')
+   <div class="row">
+   <div class="col s12">
+
+      @yield('content')
+  
+   </div>
+   </div>
    </div>
   
   <div id="overlay-login" class="blur">
   
   </div>
 </main>
+
+{{-- Login --}}
+<div class="modal" id="login">
+  <div class="row">
+  <h5 class="modal-close">&#10005;</h5>
+
+<div class="modal-content center">
+    <h5><b>LOGIN</b></h3>
+  <form action="#">
+
+<div class="col s3"></div>
+
+<div class="input-field col s6">
+<i class="material-icons prefix">person_outline</i>
+<input type="text" id="username">
+<label for="username">Username</label>
+</div><br>
+
+<div class="row"></div>
+<div class="col s3"></div>
+
+<div class="input-field col s6">
+<i class="material-icons prefix">lock</i>
+<input type="password" id="password">
+<label for="password">Password</label>
+</div><br>
+
+
+<div class="row"></div>
+
+<button class="btn waves-effect waves-light" type="submit" name="login"  style="background-color: #2E3638; width: 30%; border-radius:30px; margin-top: 50px;">Login</button>
+  
+  </form>
+</div>
+</div>
+</div>
 
     {{-- footer --}}
 <footer>
@@ -62,7 +105,7 @@
           <div class="grey-text text-lighten-4 right valign-wrapper" style="padding-top:20px;padding-right:30px">
             Powered By&nbsp;&nbsp;
             <img id="gambarLaravel" src="{{asset('img/ICON/Laravel-gray.png')}}" style="width:40px;height:40px" alt="" onmouseover="toogleLaravel(true)" onmouseout="toogleLaravel(false)">
-            &nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
             <img id="gambarMater" src="{{asset('img/ICON/Materialize-gray.png')}}" style="width:40px;height:40px" onmouseover="toogleMater(true)" onmouseout="toogleMater(false)" alt="">
           </div>
         {{-- </div> --}}
@@ -99,6 +142,10 @@
               $('#gambarMater').attr('src','{{asset("img/ICON/Materialize-gray.png")}}');
             }
           }
+
+          $(document).ready(function(){
+            $('.modal').modal();
+          });
       </script>
 </body>
 </html>

@@ -36,3 +36,11 @@ footer {
   font-size: 12px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.modal-close{
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  margin: 0px;
+  padding: 10px;
+}
