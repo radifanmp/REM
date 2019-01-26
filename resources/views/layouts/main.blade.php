@@ -15,7 +15,7 @@
 <body>
 <main>    
     {{-- menu --}}
-<nav>
+<nav class="transparent">
         <div class="nav-wrapper">
           {{-- <div class="container"> --}}
           <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -73,7 +73,7 @@
       {{-- slider jumbotron --}}
       <script>
           const slider = document.querySelector('.slider');
-          var responsive=Math.floor($(window ).height()*0.33);
+          var responsive=Math.floor($(window ).height()*0.4);
           console.log(responsive);
           M.Slider.init(slider, {
               indicators: false,
