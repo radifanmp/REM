@@ -25,8 +25,11 @@
             <li><a href="/contact">Contact</a></li>
           </ul>
           <ul id="nav-mobile2" class="right hide-on-med-and-down">
+          <li><i class="tiny material-icons">person_add</i></li>
+          <li><a href="#daftar" class="modal-trigger">Daftar</a></li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <li><i class="tiny material-icons">input</i></li>
           <li><a href="#login" class="modal-trigger">Login</a></li>
-          <li><a href="/daftar" >Daftar</a></li>
           </ul>
         {{-- </div> --}}
         </div>
@@ -95,7 +98,114 @@
 </div>
 </div>
 
-    {{-- footer --}}
+{{-- Daftar --}}
+
+<div class="modal" id="daftar">
+  <div class="row">
+  <h5 class="modal-close">&#10005;</h5>
+
+<div class="modal-content center">
+    <h5><b>DAFTAR</b></h3>
+  <form action="#">
+
+<div class="col s3"></div>
+
+<div class="input-field col s6">
+<i class="material-icons prefix">account_circle</i>
+<input type="text" id="nama">
+<label for="nama">Nama</label>
+</div><br>
+
+<div class="row"></div>
+<div class="col s4"></div>
+
+<div class="input-field col s5">
+    <select>
+        <option value="" disabled selected>-Pilih-</option>
+        <option value="islam">Islam</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="3">Option 3</option>
+        <option value="3">Option 3</option>
+        <option value="3">Option 3</option>
+      </select>
+      <label>Agama</label>
+</div><br>
+
+<div class="row"></div>
+<div class="col s3"></div>
+
+<div class="col s6">
+{{-- <i class="material-icons prefix">wc</i> --}}
+    <label>
+    <input class="with-gap" name="jenkel" type="radio" checked/> 
+    <span>Laki-laki</span>
+    </label>
+    
+    <label>
+    <input class="with-gap" name="jenkel" type="radio" />
+    <span>Perempuan</span>
+    </label>
+
+</div><br>
+
+<div class="row"></div>
+<div class="col s3"></div>
+
+<div class="input-field col s6">
+<i class="material-icons prefix">pin_drop</i>
+<textarea id="alamat" class="materialize-textarea"></textarea>
+<label for="alamat">alamat</label>
+</div><br>
+
+<div class="row"></div>
+<div class="col s3"></div>
+
+<div class="input-field col s6">
+<i class="material-icons prefix">perm_identity</i>
+<input type="text" id="username">
+<label for="username">Username</label>
+</div><br>
+
+<div class="row"></div>
+<div class="col s3"></div>
+
+<div class="input-field col s6">
+<i class="material-icons prefix">lock</i>
+<input type="password" id="password">
+<label for="password">Password</label>
+</div><br>
+
+<div class="row"></div>
+<div class="col s3"></div>
+
+<div class="input-field col s6">
+<i class="material-icons prefix">lock_outline</i>
+<input type="password" id="kmpassword">
+<label for="kmpassword">Konfirmasi Password</label>
+</div><br>
+
+
+<div class="row"></div>
+<div class="col s3"></div>
+
+<div class="input-field col s6">
+<i class="material-icons prefix">email</i>
+<input type="email" id="email" class="validate">
+<label for="email">Email</label>
+<span class="helper-text" data-error="Salah" data-success="Benar"></span>
+</div><br>
+
+<div class="row"></div>
+
+<button class="btn waves-effect waves-light" type="submit" name="daftar"  style="background-color: #2E3638; width: 30%; border-radius:30px; margin-top: 50px;">Daftar</button>
+  
+  </form>
+</div>
+</div>
+</div>
+
+{{-- footer --}}
 <footer>
     <div class="page-footer" style="background-color: #4D595D;">
       <div class="left" style="background-color: #2E3638; padding:30px 30px 30px 30px;">
@@ -146,6 +256,10 @@
           $(document).ready(function(){
             $('.modal').modal();
           });
+
+          $(document).ready(function(){
+             $('select').formSelect();
+           });
       </script>
 </body>
 </html>
