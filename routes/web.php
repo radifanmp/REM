@@ -11,9 +11,12 @@
 |
 */
 
+// HOME
 Route::get('/', 'Frontend\HomeController@Index');
 Route::get('/about', 'Frontend\HomeController@About');
 Route::get('/index', 'Frontend\HomeController@Index');
 Route::get('/contact', 'Frontend\HomeController@Contact');
 
+// Login Dan Logout
 Route::post('/login','Frontend\LoginController@login');
+Route::get('/logout','Frontend\LoginController@logout');

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\models\User as UserModel;
 use Illuminate\Http\Request;
+use App\models\User as UserModel;
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Frontend\BaseController;
 
 class LoginController extends BaseController {
@@ -30,5 +31,12 @@ class LoginController extends BaseController {
         // Get Halaman Redirect Setelah Login
         $backUrl = self::getSession('HomeUrl');
         return redirect($backUrl);
+    }
+
+    public function logout() {
+        if(Session::has('username')) {
+            Session::flush();
+        }
+        return redirect('/');
     }
 }
