@@ -16,6 +16,30 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`db_rem` /*!40100 DEFAULT CHARACTER SET 
 
 USE `db_rem`;
 
+/*Table structure for table `tb_anggota` */
+
+DROP TABLE IF EXISTS `tb_anggota`;
+
+CREATE TABLE `tb_anggota` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `id_user` bigint(20) DEFAULT NULL,
+  `nama` varchar(50) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `id_agama` bigint(20) DEFAULT NULL,
+  `jenis_kelamin` enum('Laki - Laki','Perempuan') DEFAULT NULL,
+  `no_telp` varchar(13) DEFAULT NULL,
+  `alamat` text,
+  `is_deleted` int(2) DEFAULT NULL,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+/*Data for the table `tb_anggota` */
+
+insert  into `tb_anggota`(`id`,`id_user`,`nama`,`email`,`id_agama`,`jenis_kelamin`,`no_telp`,`alamat`,`is_deleted`,`created_date`) values 
+(1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2019-02-23 22:51:57'),
+(2,6,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2019-02-23 22:58:48');
+
 /*Table structure for table `tb_hak_akses` */
 
 DROP TABLE IF EXISTS `tb_hak_akses`;
@@ -23,14 +47,31 @@ DROP TABLE IF EXISTS `tb_hak_akses`;
 CREATE TABLE `tb_hak_akses` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `nama` varchar(30) DEFAULT NULL,
+  `is_deleted` int(2) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tb_hak_akses` */
 
-insert  into `tb_hak_akses`(`id`,`nama`) values 
-(1,'super-admin'),
-(2,'user');
+insert  into `tb_hak_akses`(`id`,`nama`,`is_deleted`) values 
+(1,'super-admin',NULL),
+(2,'user',NULL);
+
+/*Table structure for table `tb_setting` */
+
+DROP TABLE IF EXISTS `tb_setting`;
+
+CREATE TABLE `tb_setting` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `key` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+/*Data for the table `tb_setting` */
+
+insert  into `tb_setting`(`id`,`key`,`value`) values 
+(1,'default_profil','/img/default_profie.jpeg');
 
 /*Table structure for table `tb_user` */
 
@@ -41,17 +82,19 @@ CREATE TABLE `tb_user` (
   `username` varchar(25) DEFAULT NULL,
   `password` varchar(60) DEFAULT NULL,
   `redirect_url` varchar(255) DEFAULT '/',
+  `is_deleted` int(2) DEFAULT '0',
   `id_hak_akses` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tb_user` */
 
-insert  into `tb_user`(`id`,`username`,`password`,`redirect_url`,`id_hak_akses`) values 
-(1,'admin','$2y$10$fQTu.fjCjQE99xkiJz1eZeEWqEkZc6VxWcdXse/4bRiNkoDPuWX8a','/about',1),
-(2,'radif','$2y$10$cTUzvR7kOqnXT4KdbJzw7Oq.sddd5gNsMqK1dJVZV90TrP27ZC9pK','/',2),
-(3,'faizal','$2y$10$cTUzvR7kOqnXT4KdbJzw7Oq.sddd5gNsMqK1dJVZV90TrP27ZC9pK','/',2),
-(4,'super-admin','$2y$10$fQTu.fjCjQE99xkiJz1eZeEWqEkZc6VxWcdXse/4bRiNkoDPuWX8a','/',1);
+insert  into `tb_user`(`id`,`username`,`password`,`redirect_url`,`is_deleted`,`id_hak_akses`) values 
+(1,'admin','$2y$10$fQTu.fjCjQE99xkiJz1eZeEWqEkZc6VxWcdXse/4bRiNkoDPuWX8a','/about',0,1),
+(2,'radif','$2y$10$cTUzvR7kOqnXT4KdbJzw7Oq.sddd5gNsMqK1dJVZV90TrP27ZC9pK','/',0,2),
+(3,'faizal','$2y$10$cTUzvR7kOqnXT4KdbJzw7Oq.sddd5gNsMqK1dJVZV90TrP27ZC9pK','/',0,2),
+(4,'super-admin','$2y$10$fQTu.fjCjQE99xkiJz1eZeEWqEkZc6VxWcdXse/4bRiNkoDPuWX8a','/',0,1),
+(6,'james','$2y$10$UMnkbgycw0iBTZRcpGXq9um5uwbaRUZbUA8NT9lyticcVzrKTQnpu','/',0,2);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

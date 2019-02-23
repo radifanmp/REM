@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 class User extends Model {
     protected $table = "tb_user";
     protected $timestamp = false;
+    public $timestamps = false;
     protected $connection = 'db_rem';
     
     public function HakAkses() {
@@ -84,7 +85,7 @@ class User extends Model {
             if(!$model->save()) {
                 return false;
             } 
-            DB:commit();
+            DB::commit();
             return true;
         }
         catch(Exception $e) {
