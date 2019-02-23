@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="{{asset('materialize/css/materialize.min.css')}}">
     <link rel="stylesheet" href="{{asset('materialize/css/font.css')}}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
-
+    <script src="{{asset('bs/js/jqry.min.js')}}"></script>
+    <script src="{{asset('materialize/js/materialize.min.js')}}"></script>
     <title>@yield('title')</title>
 </head>
 <body>
@@ -198,16 +199,6 @@
   <input type="password" id="kmpassword">
   <label for="kmpassword">Konfirmasi Password</label>
   </div><br>
-  
-  
-  <div class="row"></div>
-  <div class="col s3"></div>
-  
-  <div class="input-field col s6">
-  <i class="material-icons prefix">email</i>
-  <input type="email" id="email" class="validate">
-  <label for="email">Email</label>
-  <span class="helper-text" data-error="Salah" data-success="Benar"></span>
   </div><br>
   
   <div class="row"></div>
@@ -236,8 +227,6 @@
       </div>
     </div>
 </footer>
-<script src="{{asset('bs/js/jqry.min.js')}}"></script>
-<script src="{{asset('materialize/js/materialize.min.js')}}"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       {{-- slider jumbotron --}}
       <script>
