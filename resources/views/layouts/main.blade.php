@@ -30,7 +30,7 @@
               </li>
 
               <li>
-                <a href="#daftar" class="modal-trigger">Daftar</a>
+                <a href="#daftar" class="modal-trigger" id="menu-daftar">Daftar</a>
               </li>
 
               <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
@@ -39,7 +39,7 @@
                 <i class="tiny material-icons">input</i>
               </li>
               <li>
-                <a href="#login" class="modal-trigger">Login</a>
+                <a href="#login" class="modal-trigger" id="menu-login">Login</a>
               </li>
           </ul>
           @else 
@@ -90,7 +90,7 @@
   @csrf
   <div class="input-field col s6">
   <i class="material-icons prefix">person_outline</i>
-  <input type="text" name="username" id="username">
+  <input type="text" name="username" id="username-login">
   <label for="username">Username</label>
   </div><br>
   
@@ -121,64 +121,16 @@
   
   <div class="modal-content center">
       <h5><b>DAFTAR</b></h3>
-  <form action="/daftar">
+  <form action="/daftar" method="POST">
   @csrf
   <div class="col s3"></div>
-  
-  <div class="input-field col s6">
-  <i class="material-icons prefix">account_circle</i>
-  <input type="text" id="nama">
-  <label for="nama">Nama</label>
-  </div><br>
-  
-  <div class="row"></div>
-  <div class="col s4"></div>
-  
-  <div class="input-field col s5">
-      <select>
-          <option value="" disabled selected>-Pilih-</option>
-          <option value="islam">Islam</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-          <option value="3">Option 3</option>
-          <option value="3">Option 3</option>
-          <option value="3">Option 3</option>
-        </select>
-        <label>Agama</label>
-  </div><br>
-  
-  <div class="row"></div>
-  <div class="col s3"></div>
-  
-  <div class="col s6">
-  {{-- <i class="material-icons prefix">wc</i> --}}
-      <label>
-      <input class="with-gap" name="jenkel" type="radio" checked/> 
-      <span>Laki-laki</span>
-      </label>
-      
-      <label>
-      <input class="with-gap" name="jenkel" type="radio" />
-      <span>Perempuan</span>
-      </label>
-  
-  </div><br>
-  
-  <div class="row"></div>
-  <div class="col s3"></div>
-  
-  <div class="input-field col s6">
-  <i class="material-icons prefix">pin_drop</i>
-  <textarea id="alamat" class="materialize-textarea"></textarea>
-  <label for="alamat">alamat</label>
-  </div><br>
   
   <div class="row"></div>
   <div class="col s3"></div>
   
   <div class="input-field col s6">
   <i class="material-icons prefix">perm_identity</i>
-  <input type="text" id="username">
+  <input type="text" name="username" id="username-daftar">
   <label for="username">Username</label>
   </div><br>
   
@@ -187,7 +139,7 @@
   
   <div class="input-field col s6">
   <i class="material-icons prefix">lock</i>
-  <input type="password" id="password">
+  <input type="password" name="password" id="password-daftar">
   <label for="password">Password</label>
   </div><br>
   
@@ -196,15 +148,14 @@
   
   <div class="input-field col s6">
   <i class="material-icons prefix">lock_outline</i>
-  <input type="password" id="kmpassword">
+  <input type="password" name="konfirmasi_password" id="kmpassword">
   <label for="kmpassword">Konfirmasi Password</label>
   </div><br>
   </div><br>
   
-  <div class="row"></div>
-  
-  <button class="btn waves-effect waves-light" type="submit" name="daftar"  style="background-color: #2E3638; width: 30%; border-radius:30px; margin-top: 50px;">Daftar</button>
-    
+  <div class="row center-align">
+    <button class="btn waves-effect waves-light" type="submit" name="daftar"  style="background-color: #2E3638; width: 30%; border-radius:30px; margin-top: 50px;">Daftar</button>
+  </div>
     </form>
   </div>
   </div>

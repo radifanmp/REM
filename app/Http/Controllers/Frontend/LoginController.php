@@ -39,4 +39,31 @@ class LoginController extends BaseController {
         }
         return redirect('/');
     }
+
+    public function daftarAnggota(Request $request) {
+        $username = $request->username;
+        $password = $request->password;
+        $konf_pass = $request->konfirmasi_password;
+        
+        // Cek Jika Username sudah ada
+        if(!UserModel::cekAvailableUsername($username)) {
+            self::setAlert("Mohon Maaf","Username telah terpakai.","error");
+            return redirect('/');
+        }
+
+        // Jika Password Berbeda dengan konfirmasi Password
+        if($password != $konf_pass) {
+            self::setAlert("Mohon Maaf","Password tidak sesuai dengan konfirmasi password.","error");
+            return redirect('/');
+        }
+
+        $berhasil = UserModel::simpanUser($username,$password,'user');
+        // Jika Tidak Berhasil Menyimpan Data
+        if(!$berhasil) {
+            self::setAlert("Mohon Maaf","Terjadi Kesalahan Saat Menyimpan Data.","error");
+            return redirect('/');
+        }
+        UserModel::setSessionUser($username);
+        return redirect('/profil/edit');
+    }
 }

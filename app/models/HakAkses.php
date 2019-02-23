@@ -10,4 +10,12 @@ class HakAkses extends Model {
     protected $timestamp = false;
     protected $connection = 'db_rem';
     
+    public static function getIdByNama($nama) {
+        $data = self::where(['nama' => $nama])->first();
+        // Jika Data Tidak Ditemukan
+        if(!$data) {
+            return null;
+        }
+        return $data->id;
+    }
 }

@@ -17,6 +17,10 @@ Route::get('/about', 'Frontend\HomeController@About');
 Route::get('/index', 'Frontend\HomeController@Index');
 Route::get('/contact', 'Frontend\HomeController@Contact');
 
-// Login Dan Logout
+// Login, Daftar Dan Logout
 Route::post('/login','Frontend\LoginController@login');
 Route::get('/logout','Frontend\LoginController@logout');
+Route::post('/daftar','Frontend\LoginController@daftarAnggota');
+
+// Profil
+Route::get('/profil/edit','Frontend\ProfilController@editProfil');
