@@ -16,6 +16,27 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`db_rem` /*!40100 DEFAULT CHARACTER SET 
 
 USE `db_rem`;
 
+/*Table structure for table `tb_agama` */
+
+DROP TABLE IF EXISTS `tb_agama`;
+
+CREATE TABLE `tb_agama` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nama_agama` varchar(15) DEFAULT NULL,
+  `gambar_agama` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+/*Data for the table `tb_agama` */
+
+insert  into `tb_agama`(`id`,`nama_agama`,`gambar_agama`) values 
+(1,'ISLAM','/img/masjidtest.jpg'),
+(2,'KATOLIK','/img/katoliktest.jpg'),
+(3,'PROTESTAN','/img/protestantest.jpg'),
+(4,'HINDU','/img/puretest.jpg'),
+(5,'BUDDHA','/img/viharatest.jpg'),
+(6,'KONG HU CU','/img/klentengtest.jpg');
+
 /*Table structure for table `tb_anggota` */
 
 DROP TABLE IF EXISTS `tb_anggota`;

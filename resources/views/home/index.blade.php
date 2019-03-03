@@ -4,10 +4,21 @@
 
 @section('content')
 
-<div style = "width:404px; height:238px;" class="card">
-    <div class="card-image waves-effect">
-      <img class="activator" src="{{asset('img/masjidtest.jpg')}}">
-    </div>
+<section id="home-agama">
 
-    </div>
+  <div class="row">
+
+    @foreach ($dataAgama as $agama)
+    <div class="col s4">
+      <div class="card" style="border-radius:10px">
+        <div class="card-image waves-effect" style="border-radius:10px">
+          <img class="activator" src="{{ $agama->gambar_agama }}">
+        </div>
+      </div>
+    </div>    
+    @endforeach    
+  
+  </div>
+
+</section>
 @endsection
