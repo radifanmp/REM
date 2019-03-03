@@ -17,7 +17,7 @@ class ProfilController extends BaseController {
         $id_user = UserModel::getIdByUsername($username);
         $data = Anggota::where('id_user',$id_user)->first();
         if(!$data) {
-            Anggota::simpanAnggota($id_user);
+            Anggota::simpanAnggota($id_user,$username);
             $data = Anggota::where('id_user',$id_user)->first();
         }
         return view('profil.edit',['data' => $data]);
