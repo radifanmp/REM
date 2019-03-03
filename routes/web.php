@@ -24,3 +24,4 @@ Route::post('/daftar','Frontend\LoginController@daftarAnggota');
 
 // Profil
 Route::get('/profil/edit','Frontend\ProfilController@editProfil');
+Route::post('/profil/edit/simpan','Frontend\ProfilController@simpanEdit');

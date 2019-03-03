@@ -47,14 +47,14 @@
             <li>Hello, {{ Session::get('username') }}</li>
             <li style="display: inline; width: 100px; height: 100px; padding: 10px;">
               <a href="#" id="menu-profil" class="dropdown-trigger" data-target="dd-profil">
-                  <img src="/img/dp.png" class="circle responsive-img" style="width:40px; height:40px;">
+              <img src="{{ Session::get('foto_profil') ? : '/img/dp.png' }}" class="circle responsive-img" style="width:40px; height:40px;">
               </a>
             </li>
           </ul>
 
           {{-- DropDown --}}
           <ul id="dd-profil" class="dropdown-content">
-              <li><a href="#!">Profil</a></li>
+              <li><a href="/profil/edit">Profil</a></li>
               <li><a href="#!">Acara Saya</a></li>
               <li><a href="#">Organisasi Saya</a></li>
               <li class="divider"></li>
@@ -228,7 +228,8 @@
              $(".dropdown-trigger").dropdown({
               coverTrigger: false,
               hover: true,
-             });           
+             });
+             $('select').material_select();           
           });
 
           $(document).ready(function(){

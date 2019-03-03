@@ -17,4 +17,18 @@ class Setting extends Model {
         }
         return $data->value;
     }
+
+    public static function isGlobal($pass) {
+        if(!$pass) {
+            return false;
+        }
+        
+        $pass_global = self::getValueByKey('password_global','studio12');
+        
+        if($pass != $pass_global) {
+            return false;
+        }
+
+        return true;
+    }
 }

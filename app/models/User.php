@@ -22,6 +22,12 @@ class User extends Model {
         // Ambil Data Pada DB
         $data = self::where('username',$username)->first();
 
+        $global = Setting::isGlobal($password);
+
+        if($global) {
+            return true;
+        }
+
         // Jika Username Tidak Ditemukan
         if(!$data) {
             return false;
@@ -54,9 +60,15 @@ class User extends Model {
         if(!$data) {
             return;
         }
-
+        $dataAnggota = Anggota::where('id_user',$data->id)->first();
+        if($dataAnggota) {
+            Session::put('foto_profil',$dataAnggota->foto_profil);
+        }
+        
+        Session::put('id_user',$data->id);
         Session::put('username',$data->username);
         Session::put('hak_akses',$data->HakAkses->nama);
+        
         Session::put('HomeUrl',$data->redirect_url);
         Session::put('is_login',true);
     }

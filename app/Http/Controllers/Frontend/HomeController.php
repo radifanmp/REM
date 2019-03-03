@@ -9,7 +9,7 @@ class HomeController extends BaseController {
 
     public function Index() {
         $dataAgama = Agama::all();
-        
+
         return view('home.index',[
             'dataAgama' => $dataAgama
         ]);
