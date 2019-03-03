@@ -45,6 +45,8 @@
           @else 
           <ul id="nav-mobile2" class="right hide-on-med-and-down">
             <li>Hello, {{ Session::get('username') }}</li>
+            <li style="display: inline; width: 100px; height: 100px; padding: 10px;">
+            <img src="/img/dp.png" class="circle responsive-img" style="width:40px; height:40px;"></li>
           </ul>
           {{-- LOGIN & DAFTAR MENU END --}}
           @endif
@@ -65,7 +67,7 @@
 
 
    
-   <div class="row" sty>
+   <div class="row">
     <div class="col s12">
       <div id="wrapper" class="container" style="padding-bottom: 30px;"> 
       @yield('content')
