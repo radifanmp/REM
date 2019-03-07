@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" href="{{asset('materialize/css/materialize.min.css')}}">
     <link rel="stylesheet" href="{{asset('materialize/css/font.css')}}">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
     <script src="{{asset('bs/js/jqry.min.js')}}"></script>
     <script src="{{asset('materialize/js/materialize.min.js')}}"></script>
     <link rel="icon" href="{{asset('img/ICON/iconv1.png')}}">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <title>@yield('title')</title>
 </head>
 <body>
@@ -230,7 +234,7 @@
               coverTrigger: false,
               hover: true,
              });
-             $('select').material_select();           
+            //  $('select').material_select();           
           });
 
           $(document).ready(function(){

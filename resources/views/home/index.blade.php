@@ -19,8 +19,10 @@
         </div>
       </div>
     </div>    
-    @endforeach    
-  
+    @endforeach  
+
+    <div id='map' style='width: 400px; height: 300px;'></div>
+
   </div>
 
 </section>
