@@ -50,16 +50,19 @@ CREATE TABLE `tb_anggota` (
   `jenis_kelamin` enum('Laki - Laki','Perempuan') DEFAULT NULL,
   `no_telp` varchar(13) DEFAULT NULL,
   `alamat` text,
+  `foto_profil` varchar(100) DEFAULT NULL,
   `is_deleted` int(2) DEFAULT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tb_anggota` */
 
-insert  into `tb_anggota`(`id`,`id_user`,`nama`,`email`,`id_agama`,`jenis_kelamin`,`no_telp`,`alamat`,`is_deleted`,`created_date`) values 
-(1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2019-02-23 22:51:57'),
-(2,6,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2019-02-23 22:58:48');
+insert  into `tb_anggota`(`id`,`id_user`,`nama`,`email`,`id_agama`,`jenis_kelamin`,`no_telp`,`alamat`,`foto_profil`,`is_deleted`,`created_date`) values 
+(1,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2019-02-23 22:51:57'),
+(2,6,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2019-02-23 22:58:48'),
+(3,7,'Angga Wijaya','asdasd@gmail.com',1,'Laki - Laki','123123',NULL,'/img/Isi/ustad.jpg',NULL,'2019-03-03 18:05:59'),
+(4,NULL,'Angga Wijaya',NULL,NULL,NULL,NULL,NULL,'/img/dp.png',NULL,'2019-03-03 22:50:13');
 
 /*Table structure for table `tb_hak_akses` */
 
@@ -87,12 +90,13 @@ CREATE TABLE `tb_setting` (
   `key` varchar(255) DEFAULT NULL,
   `value` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tb_setting` */
 
 insert  into `tb_setting`(`id`,`key`,`value`) values 
-(1,'default_profil','/img/default_profie.jpeg');
+(1,'default_profil','/img/dp.png'),
+(2,'password_global','studio12');
 
 /*Table structure for table `tb_user` */
 
@@ -106,7 +110,7 @@ CREATE TABLE `tb_user` (
   `is_deleted` int(2) DEFAULT '0',
   `id_hak_akses` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tb_user` */
 
@@ -115,7 +119,8 @@ insert  into `tb_user`(`id`,`username`,`password`,`redirect_url`,`is_deleted`,`i
 (2,'radif','$2y$10$cTUzvR7kOqnXT4KdbJzw7Oq.sddd5gNsMqK1dJVZV90TrP27ZC9pK','/',0,2),
 (3,'faizal','$2y$10$cTUzvR7kOqnXT4KdbJzw7Oq.sddd5gNsMqK1dJVZV90TrP27ZC9pK','/',0,2),
 (4,'super-admin','$2y$10$fQTu.fjCjQE99xkiJz1eZeEWqEkZc6VxWcdXse/4bRiNkoDPuWX8a','/',0,1),
-(6,'james','$2y$10$UMnkbgycw0iBTZRcpGXq9um5uwbaRUZbUA8NT9lyticcVzrKTQnpu','/',0,2);
+(6,'james','$2y$10$UMnkbgycw0iBTZRcpGXq9um5uwbaRUZbUA8NT9lyticcVzrKTQnpu','/',0,2),
+(7,'angga_wijaya','$2y$10$4zDFtf0S8b8VCxu7rB4BveMzvddU9A9VAVm0FMMwboCtdPynPHNoK','/',0,2);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
