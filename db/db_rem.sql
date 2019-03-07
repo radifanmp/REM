@@ -55,7 +55,7 @@ CREATE TABLE `tb_anggota` (
   `is_deleted` int(2) DEFAULT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tb_anggota` */
 
@@ -64,9 +64,10 @@ insert  into `tb_anggota`(`id`,`id_user`,`nama`,`email`,`id_agama`,`jenis_kelami
 (2,6,'JAMES WATSON',NULL,2,'Perempuan',NULL,NULL,'uploads/foto_profil/zGhFscsmJRw5osDvPbYpTjJkclP3wEhTfUd7Irhf.jpeg',NULL,'2019-02-23 22:58:48'),
 (3,7,'Angga Wijaya','asdasd@gmail.com',1,'Laki - Laki','123123',NULL,'uploads/foto_profil/wLW81q9xE7cMyFsnJvuPPFD8gNcfLYl6MNjem1ZQ.jpeg',NULL,'2019-03-03 18:05:59'),
 (5,3,'Faizal',NULL,NULL,NULL,NULL,NULL,'uploads/foto_profil/dp.png',NULL,'2019-03-07 16:51:13'),
-(6,8,'Atta',NULL,NULL,NULL,NULL,NULL,'/img/dp.png',NULL,'2019-03-07 16:56:22'),
+(6,8,'Atta',NULL,NULL,NULL,NULL,NULL,'uploads/foto_profil/dp.png',NULL,'2019-03-07 16:56:22'),
 (7,9,'Say',NULL,NULL,NULL,NULL,NULL,'uploads/foto_profil/dp.png',NULL,'2019-03-07 16:58:33'),
-(8,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'uploads/foto_profil/dp.png',NULL,'2019-03-07 16:59:42');
+(8,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'uploads/foto_profil/dp.png',NULL,'2019-03-07 16:59:42'),
+(9,10,'Phil','phil@neverland.com',1,'Laki - Laki',NULL,NULL,'uploads/foto_profil/dp.png',NULL,'2019-03-07 20:35:19');
 
 /*Table structure for table `tb_hak_akses` */
 
@@ -114,7 +115,7 @@ CREATE TABLE `tb_user` (
   `is_deleted` int(2) DEFAULT '0',
   `id_hak_akses` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tb_user` */
 
@@ -126,7 +127,27 @@ insert  into `tb_user`(`id`,`username`,`password`,`redirect_url`,`is_deleted`,`i
 (6,'james','$2y$10$UMnkbgycw0iBTZRcpGXq9um5uwbaRUZbUA8NT9lyticcVzrKTQnpu','/',0,2),
 (7,'angga_wijaya','$2y$10$4zDFtf0S8b8VCxu7rB4BveMzvddU9A9VAVm0FMMwboCtdPynPHNoK','/',0,2),
 (8,'atta','$2y$10$U7UYNTKfuLYC/zRtuEuYS.VQYPoCCgEvkJ9hlYyWZixAlb/72f4Ca','/',0,2),
-(9,'say','$2y$10$/NnDF0DVPzT88WTghncOqedKroXOW/8J.BK9bcWHRM3fZYKxzvWLq','/',0,2);
+(9,'say','$2y$10$/NnDF0DVPzT88WTghncOqedKroXOW/8J.BK9bcWHRM3fZYKxzvWLq','/',0,2),
+(10,'phil','$2y$10$zJyy02c.t77QJG16qU2J7eUqKDVvVG6JiXELw3UEQ//yV1Z63O3yq','/',0,2);
+
+/*Table structure for table `tb_wilayah` */
+
+DROP TABLE IF EXISTS `tb_wilayah`;
+
+CREATE TABLE `tb_wilayah` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nama_wilayah` varchar(100) DEFAULT NULL,
+  `parent_id` bigint(20) DEFAULT NULL,
+  `type` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+/*Data for the table `tb_wilayah` */
+
+insert  into `tb_wilayah`(`id`,`nama_wilayah`,`parent_id`,`type`) values 
+(2,'Aceh',0,'Provinsi'),
+(3,'Jawa Barat',0,'Provinsi'),
+(4,'Aceh Barat',2,'Kabupaten');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

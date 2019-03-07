@@ -29,3 +29,11 @@ Route::post('/profil/edit/simpan','Frontend\ProfilController@simpanEdit');
 
 // Agama
 Route::get('/agama/kategori/{nama}','Frontend\AgamaController@Kategori');
+
+
+
+//  Backend
+
+// Wilayah
+Route::get('backend/wilayah/tambah','Backend\WilayahController@tambah');
+Route::post('backend/wilayah/tambah/proses','Backend\WilayahController@simpanTambah');
