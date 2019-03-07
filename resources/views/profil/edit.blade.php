@@ -3,6 +3,9 @@
 <div>
     <form action="/profil/edit/simpan" method="post">
       @csrf
+
+    
+    
     <label for="">Nama Lengkap</label>
     <input type="text" name="nama" value="{{ $data->nama }}" >
 
@@ -37,7 +40,7 @@
     <textarea id="pesan" name="alamat" class="materialize-textarea">{{ $data->alamat }}</textarea>
     <div class="row">
       <div class="col s12 center-align">
-          <button type="submit" class="waves-effect waves-light btn blue-grey darken-4">Simpan</button>
+          <button type="submit" class="waves-effect waves-light btn blue-grey darken-4" style="width: 30%; border-radius:30px;">Simpan</button>
       </div>
     </div>
   </form>

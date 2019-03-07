@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <script src="{{asset('bs/js/jqry.min.js')}}"></script>
     <script src="{{asset('materialize/js/materialize.min.js')}}"></script>
+    <link rel="icon" href="{{asset('img/ICON/iconv1.png')}}">
     <title>@yield('title')</title>
 </head>
 <body>

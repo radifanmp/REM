@@ -18,7 +18,7 @@
 
               {{-- form --}}
 
-                <form class="col s12">
+                <form action="#" method="#" class="col s12">
                   <div class="row">
                     
                     <div class="col s2">
