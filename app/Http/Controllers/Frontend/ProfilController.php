@@ -57,4 +57,8 @@ class ProfilController extends BaseController {
         return redirect('/profil/edit');
 
     }
+
+    public function index(){
+        return view('profil.index');
+    }
 }

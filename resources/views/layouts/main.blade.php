@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="{{asset('materialize/css/materialize.min.css')}}">
     <link rel="stylesheet" href="{{asset('materialize/css/font.css')}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
@@ -59,7 +60,7 @@
 
           {{-- DropDown --}}
           <ul id="dd-profil" class="dropdown-content">
-              <li><a href="/profil/edit">Profil</a></li>
+              <li><a href="/profil">Profil</a></li>
               <li><a href="#!">Acara Saya</a></li>
               <li><a href="#">Organisasi Saya</a></li>
               <li class="divider"></li>

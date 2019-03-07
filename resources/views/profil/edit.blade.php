@@ -1,12 +1,15 @@
 @extends('layouts.main')
 @section('content')
 <div>
-  
+    <div style= "margin:15px;"><a href="/profil/" class="waves-effect waves-light btn grey darken-3" style="border-radius:15px;"><i class="fas fa-hand-point-left" style="font-size:20px;"></i>&nbsp;&nbsp; Kembali</a></div>
+   
+    <h5 class="center-align" style="font-famly: Segoe UI;font-weight: 300;font-size:30px;">Edit Profil</h5> 
+    <hr class="style-one"  style="margin-bottom:79px;">
     <form action="/profil/edit/simpan" method="post" enctype="multipart/form-data">
       @csrf
     <center>
-    <img src="{{ $data->foto_profil ? asset('storage/' . $data->foto_profil) : '/img/dp.png' }}" class="circle responsive-img" style="width:200px; height:200px;"><br>
-    <input type="file" name="foto_profil" style="color:transparent; margin-left:180px;" accept=".png, .jpg, .jpeg">
+    <div><img src="{{ $data->foto_profil ? asset('storage/' . $data->foto_profil) : '/img/dp.png' }}" class="circle responsive-img" style="width:200px; height:200px;"><br>
+    <input type="file" name="foto_profil" style="color:transparent; margin-left:180px;" accept=".png, .jpg, .jpeg"></div>
     </center>
     <br>
 
