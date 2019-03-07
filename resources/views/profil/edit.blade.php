@@ -1,7 +1,9 @@
 @extends('layouts.main')
 @section('content')
 <div>
+    @if (!$newAkun)
     <div style= "margin:15px;"><a href="/profil/" class="waves-effect waves-light btn grey darken-3" style="border-radius:15px;"><i class="fas fa-hand-point-left" style="font-size:20px;"></i>&nbsp;&nbsp; Kembali</a></div>
+    @endif
    
     <h5 class="center-align" style="font-famly: Segoe UI;font-weight: 300;font-size:30px;">Edit Profil</h5> 
     <hr class="style-one"  style="margin-bottom:79px;">
@@ -14,17 +16,17 @@
     <br>
 
     <label for="">Nama Lengkap</label>
-    <input type="text" name="nama" value="{{ $data->nama }}" >
+    <input type="text" required name="nama" value="{{ $data->nama }}" >
 
     <label for="">Username</label>
-    <input type="text" name="username" value="{{ Session::get('username') }}">
+    <input type="text" required name="username" value="{{ Session::get('username') }}">
 
     <label for="">Email</label>
-    <input type="email" name="email" value="{{ $data->email }}"class="validate">
+    <input type="email" required name="email" value="{{ $data->email }}" class="validate">
     <span class="helper-text" data-error="Salah" data-success="Benar"></span>
 
     <label>Agama
-        <select name="id_agama">
+        <select required name="id_agama">
           <option value="" disabled>Pilih</option>
           @foreach ($listAgama as $a)
             <option value="{{$a->id}}" {{ ($data->id_agama == $a->id) ? 'selected' : '' }}>{{ ucwords(strtolower($a->nama_agama)) }}</option>
@@ -33,7 +35,7 @@
     </label>
 
     <label>Jenis Kelamin
-    <select name="jenis_kelamin">
+    <select required name="jenis_kelamin">
       <option value="" disabled selected>Pilih</option>
       <option {{ ($data->jenis_kelamin == 'Laki - Laki') ? 'selected' : '' }} value="Laki - Laki">Laki-laki</option>
       <option {{ ($data->jenis_kelamin == 'Perempuan') ? 'selected' : '' }} value="Perempuan">Perempuan</option>

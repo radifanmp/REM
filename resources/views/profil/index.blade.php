@@ -5,9 +5,9 @@
     <hr class="style-one"  style="margin-bottom:79px;">
       @csrf
     <center>
-    <img src="/img/dp.png" class="circle responsive-img" style="width:200px; height:200px;"><br>
-    <label style="font-size:40px; font-weight:bold;">James Lowes</label><br>
-    <label style="font-size:25px;">James_lowes</label>
+    <img src="{{ $data->foto_profil ? asset('storage/' . $data->foto_profil) : '/img/dp.png' }}" class="circle responsive-img" style="width:200px; height:200px;"><br>
+    <label style="font-size:40px; font-weight:bold;">{{ $data->nama }}</label><br>
+    <label style="font-size:25px;">{{ '@'.$data->user->username }}</label>
     </center>
     <br>
     <label style="font-size:15px; font-weight:bold;">Informasi Umum</label>
@@ -16,11 +16,11 @@
             <tbody>
               <tr>
                 <td style="font-weight:bold;"><i class="fas fa-user-circle" style="font-size:20px;"></i>&nbsp;&nbsp;Nama</td>
-                <td style="width:50%;">James Lowes</td>
+                <td style="width:50%;">{{ $data->nama }}</td>
               </tr>
               <tr>
                 <td style="font-weight:bold;"><i class="fas fa-envelope " style="font-size:20px;"></i>&nbsp;&nbsp;Email</td>
-                <td>James@gmail.com</td>
+                <td>{{ $data->email }}</td>
               </tr>
               <tr>
                 <td style="font-weight:bold;"><i class="fas fa-key " style="font-size:20px;"></i>&nbsp;&nbsp;Password</td>
@@ -28,19 +28,19 @@
               </tr>
               <tr>
                     <td style="font-weight:bold;"><i class="fas fa-arrow-circle-right " style="font-size:20px;"></i>&nbsp;&nbsp;Agama</td>
-                    <td>Islam</td>
+                    <td>{{ $data->agama ? ucwords($data->agama->nama_agama) : '' }}</td>
              </tr>
              <tr>
                     <td style="font-weight:bold;"><i class="fas fa-arrow-circle-down " style="font-size:20px;"></i>&nbsp;&nbsp;Jenis Kelamin</td>
-                    <td>Laki-laki</td>
+                    <td>{{ $data->jenis_kelamin }}</td>
             </tr>
             <tr>
                     <td style="font-weight:bold;"><i class="fas fa-phone " style="font-size:20px;"></i>&nbsp;&nbsp;No. Telp</td>
-                    <td>083896833133</td>
+                    <td>{{ $data->no_telp }}</td>
             </tr>
             <tr>
                     <td style="font-weight:bold;"><i class="fas fa-map-marked-alt " style="font-size:20px;"></i>&nbsp;&nbsp;Alamat</td>
-                    <td>Jl.Perum Griya Alam Sentosan Blok R1 No9</td>
+                    <td>{{ $data->alamat }}</td>
             </tr>
             </tbody>
           </table>

@@ -21,13 +21,16 @@ class ProfilController extends BaseController {
         $id_user = UserModel::getIdByUsername($username);
         $data = Anggota::where('id_user',$id_user)->first();
         $listAgama = Agama::all();
+        $newAkun = false;
         if(!$data) {
             Anggota::simpanAnggota($id_user,$username);
             $data = Anggota::where('id_user',$id_user)->first();
+            $newAkun = true;
         }
         return view('profil.edit',[
             'data' => $data,
             'listAgama' => $listAgama,
+            'newAkun' => $newAkun,
             ]);
     }
 
@@ -59,6 +62,16 @@ class ProfilController extends BaseController {
     }
 
     public function index(){
-        return view('profil.index');
+        $id_user = Session::get('id_user');
+        $data = Anggota::where('id_user', $id_user)->first();
+        
+        if(!$data) {
+            return redirect('/');
+        }
+
+
+        return view('profil.index',[
+            'data' => $data,
+        ]);
     }
 }

@@ -18,6 +18,10 @@ class Anggota extends Model {
         return $this->hasOne('App\models\User','id','id_user');
     }
 
+    public function agama() {
+        return $this->hasOne('App\models\Agama','id','id_agama');
+    }
+
     public static function simpanAnggota($id_user,$username) {
         $model = new Anggota();
         $model->id_user = $id_user;

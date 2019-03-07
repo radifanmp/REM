@@ -110,7 +110,7 @@
   @csrf
   <div class="input-field col s6">
   <i class="material-icons prefix">person_outline</i>
-  <input type="text" name="username" id="username-login">
+  <input required type="text" name="username" id="username-login">
   <label for="username">Username</label>
   </div><br>
   
@@ -119,7 +119,7 @@
   
   <div class="input-field col s6">
   <i class="material-icons prefix">lock</i>
-  <input type="password" name="password" id="password">
+  <input required type="password" name="password" id="password">
   <label for="password">Password</label>
   </div><br>
   
@@ -150,7 +150,7 @@
   
   <div class="input-field col s6">
   <i class="material-icons prefix">perm_identity</i>
-  <input type="text" name="username" id="username-daftar">
+  <input required type="text" name="username" id="username-daftar">
   <label for="username">Username</label>
   </div><br>
   
@@ -159,7 +159,7 @@
   
   <div class="input-field col s6">
   <i class="material-icons prefix">lock</i>
-  <input type="password" name="password" id="password-daftar">
+  <input required type="password" name="password" id="password-daftar">
   <label for="password">Password</label>
   </div><br>
   
@@ -168,7 +168,7 @@
   
   <div class="input-field col s6">
   <i class="material-icons prefix">lock_outline</i>
-  <input type="password" name="konfirmasi_password" id="kmpassword">
+  <input required type="password" name="konfirmasi_password" id="kmpassword">
   <label for="kmpassword">Konfirmasi Password</label>
   </div><br>
   </div><br>
