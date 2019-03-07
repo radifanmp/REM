@@ -4,18 +4,11 @@
   
     <form action="/profil/edit/simpan" method="post">
       @csrf
-
-      {{-- upload Foto --}}
-      <div class="avatar-upload">
-          <div class="avatar-edit">
-              <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-              <label for="imageUpload"></label>
-          </div>
-          <div class="avatar-preview">
-              <div id="imagePreview" style="background-image: url('http://i.pravatar.cc/500?img=7');">
-              </div>
-          </div>
-      </div>
+    <center>
+    <img src="/img/dp.png" class="circle responsive-img" style="width:200px; height:200px;"><br>
+    <input type="file" name="foto_profil" style="color:transparent; margin-left:180px;">
+    </center>
+    <br>
 
     <label for="">Nama Lengkap</label>
     <input type="text" name="nama" value="{{ $data->nama }}" >
