@@ -1,11 +1,22 @@
 @extends('layouts.main')
 @section('content')
 <div>
+  
     <form action="/profil/edit/simpan" method="post">
       @csrf
 
-    
-    
+      {{-- upload Foto --}}
+      <div class="avatar-upload">
+          <div class="avatar-edit">
+              <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+              <label for="imageUpload"></label>
+          </div>
+          <div class="avatar-preview">
+              <div id="imagePreview" style="background-image: url('http://i.pravatar.cc/500?img=7');">
+              </div>
+          </div>
+      </div>
+
     <label for="">Nama Lengkap</label>
     <input type="text" name="nama" value="{{ $data->nama }}" >
 
