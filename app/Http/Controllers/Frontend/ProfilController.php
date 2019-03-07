@@ -34,6 +34,7 @@ class ProfilController extends BaseController {
     public function simpanEdit(Request $request) {
         $id = Session::get('id_user');
         $data = Anggota::where('id_user',$id)->first();
+        $saveFileDb = true;
         
         // Upload Foto Profil
         if($request->foto_profil) {
