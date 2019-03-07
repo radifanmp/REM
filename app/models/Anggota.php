@@ -5,6 +5,8 @@ namespace App\models;
 use Illuminate\Database\Eloquent\Model;
 use App\helpers\UserHelper;
 use Illuminate\Support\Facades\Session;
+use App\helpers\Helpers;
+use Illuminate\Support\Facades\Storage;
 
 class Anggota extends Model {
     protected $table = "tb_anggota";
@@ -43,6 +45,31 @@ class Anggota extends Model {
             return false;
         }
 
+        return true;
+    }
+
+    public static function saveFotoProfil($path,$id_user) {
+        $data = self::where('id_user',$id_user)->first();
+
+        if(!$data) {
+            return false;
+        }
+
+        $path = Helpers::hapusPublicPath($path);
+        
+        if($data->foto_profil) {
+            Storage::delete('public/'.$data->foto_profil);
+        }
+        
+        $data->foto_profil = $path;
+
+
+
+        if(!$data->save()) {
+            return false;
+        }
+
+        Session::put('foto_profil', asset('storage/' . $data->foto_profil));
         return true;
     }
 }

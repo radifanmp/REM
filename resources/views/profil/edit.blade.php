@@ -2,11 +2,11 @@
 @section('content')
 <div>
   
-    <form action="/profil/edit/simpan" method="post">
+    <form action="/profil/edit/simpan" method="post" enctype="multipart/form-data">
       @csrf
     <center>
-    <img src="/img/dp.png" class="circle responsive-img" style="width:200px; height:200px;"><br>
-    <input type="file" name="foto_profil" style="color:transparent; margin-left:180px;">
+    <img src="{{ $data->foto_profil ? asset('storage/' . $data->foto_profil) : '/img/dp.png' }}" class="circle responsive-img" style="width:200px; height:200px;"><br>
+    <input type="file" name="foto_profil" style="color:transparent; margin-left:180px;" accept=".png, .jpg, .jpeg">
     </center>
     <br>
 

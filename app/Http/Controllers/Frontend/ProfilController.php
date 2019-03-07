@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use Illuminate\Support\Facades\Session;
-use App\Http\Controllers\Frontend\BaseController;
-use App\models\User as UserModel;
-use App\models\Anggota;
 use App\models\Agama;
+use App\models\Anggota;
 use Illuminate\Http\Request;
+use App\models\User as UserModel;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Frontend\BaseController;
 
 class ProfilController extends BaseController {
 
@@ -33,11 +35,19 @@ class ProfilController extends BaseController {
         $id = Session::get('id_user');
         $data = Anggota::where('id_user',$id)->first();
         
+        // Upload Foto Profil
+        if($request->foto_profil) {
+            $upload = $request->file('foto_profil');
+            $path = $upload->store('public/uploads/foto_profil');
+            $saveFileDb = Anggota::saveFotoProfil($path, $id);
+        }
+
         if(!$data) {
             return redirect('/');
         }
+
         $edit = $data->simpanEdit($request);
-        if(!$edit) {
+        if(!$edit || !$saveFileDb) {
             self::setAlert("Mohon Maaf","Data Tidak Berhasil Tersimpan","error");
             return redirect('/profil/edit');
         }

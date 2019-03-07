@@ -62,7 +62,7 @@ class User extends Model {
         }
         $dataAnggota = Anggota::where('id_user',$data->id)->first();
         if($dataAnggota) {
-            Session::put('foto_profil',$dataAnggota->foto_profil);
+            Session::put('foto_profil',asset('storage/' . $dataAnggota->foto_profil));
         }
         
         Session::put('id_user',$data->id);
