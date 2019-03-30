@@ -2,15 +2,27 @@
 @section('content')
 
     <div>
-        <h1 style="text-align:center">Organisasi Saya</h1>
+            <h5 class="center-align" style="font-famly: Segoe UI;font-weight: 300;font-size:30px;">ORGANISASI SAYA</h5>
+            <hr class="style-one"  style="margin-bottom:79px;">
         
         <div class="row">
-            <div class="col s6">
-                <a href="">Buat Organisasi</a>
+            <div class="col s3">
+
+                <div style= "margin:15px;"><a href="/#/" class="waves-effect waves-light btn grey darken-3" style="border-radius:15px;">Buat Organisasi</a></div>
+        
             </div>
-            <div class="col s6" style="float:right"></div>
-                <input type="search" placeholder="Cari Organisasi">
-                <button>Cari</button>
+
+            <div class="col s3">
+
+            </div>
+
+            <div class="col s3" style="float:right;">
+            <div class="input-field">
+                    <i class="material-icons prefix">search</i>
+                    <input id="judul" type="search">
+                    <label for="search">Cari Organisasi</label>
+                </div>
+            </div>
             </div>
         </div>
         
@@ -23,10 +35,15 @@
                     <div class="card-content">
                         <div class="row">
                             <div class="col s3">
-                                <img src="{{ $org->gambar_organisasi}}" class="circle responsive-img" style="width:100px;height:100px;">
+                                <img src="{{ $org->gambar_organisasi}}" class="circle responsive-img" style="width:100px;height:100px;"><br>
                             </div>
-                            <div class="col s9">
-                                <strong>{{ $org->nama_organisasi }}</strong><br>
+
+                            <div class="col s1">
+
+                            </div>
+
+                            <div class="col s8">
+                                <strong style="font-size: 20pt;">{{ $org->nama_organisasi }}</strong><br>
                                 <span>{{ $org->alamat_organisasi }}</span><br>
                                 <span>Berdiri Sejak, {{ $dateHelper->convertDateIndo($org->created_date,['bulan','tahun']) }}</span><br>
                                 <span>{{ $org->nama_kabupaten }}, {{ $org->nama_provinsi }}</span>
