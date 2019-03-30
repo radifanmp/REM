@@ -68,7 +68,7 @@
                     <div class="col s2">
                         <i class="small material-icons" style="color: #2E3638;">mail_outline</i><br>
                         <label style="font-size: 20px; color: #2E3638; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">EMAIL</label><br>
-                        <p style="font-size: 12px; color: #2E3638; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><a href="mailto:radifanmp@gmail.com?Subject=[FEEDBACK]&body=body=Your+awesome+message+goes+here.%0D%0A%0D%0AThis+is+on+a+new+line.+Go+to+http%3A%2F%2Fwww.google.com%2F." target="_top">radifamp@gmail.com</a></p>
+                        <p style="font-size: 12px; color: #2E3638; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><a href="mailto:radifanmp@gmail.com?Subject=[FEEDBACK]&body=body=Your+awesome+message+goes+here.%0D%0A%0D%0AThis+is+on+a+new+line.+Go+to+http%3A%2F%2Fwww.google.com%2F." target="_top">radifanmp@gmail.com</a></p>
                     </div>
 
                     <div class="col s1">
