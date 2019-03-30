@@ -62,7 +62,7 @@
           <ul id="dd-profil" class="dropdown-content">
               <li><a href="/profil">Profil</a></li>
               <li><a href="#!">Acara Saya</a></li>
-              <li><a href="#">Organisasi Saya</a></li>
+              <li><a href="/org/me">Organisasi Saya</a></li>
               <li class="divider"></li>
               <li><a href="/logout">Keluar</a></li>
             </ul>
@@ -198,7 +198,7 @@
       </div>
     </div>
 </footer>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="{{asset('js/sweetalert.min.js')}}"></script>
       {{-- slider jumbotron --}}
       <script>
           const slider = document.querySelector('.slider');

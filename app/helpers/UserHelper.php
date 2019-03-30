@@ -3,6 +3,9 @@
 namespace App\helpers;
 
 use Symfony\Component\Console\Helper\Helper;
+use App\models\OrganisasiDetail;
+use Illuminate\Support\Arr;
+use App\models\Organisasi;
 
 
 class UserHelper extends Helper {
@@ -28,5 +31,13 @@ class UserHelper extends Helper {
         $namaLengkap = implode(" ",$exp);
 
         return $namaLengkap;
+    }
+
+    public static function getOrganisasiUser($id) {
+        $data = OrganisasiDetail::where('id_user', $id)->get();
+        $dataOrg = ArrayHelper::getColumn($data, 'id_organisasi');
+        
+        $org = Organisasi::where('id',$dataOrg)->get();
+        return $org;
     }
 }

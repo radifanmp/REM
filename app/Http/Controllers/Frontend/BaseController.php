@@ -30,4 +30,8 @@ class BaseController extends Controller {
         }
         return Session::get($name);
     }
+
+    public static function backHome() {
+        return redirect('/');
+    }
 }

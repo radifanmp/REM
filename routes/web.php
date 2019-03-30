@@ -37,3 +37,6 @@ Route::get('/agama/kategori/{nama}','Frontend\AgamaController@Kategori');
 // Wilayah
 Route::get('backend/wilayah/tambah','Backend\WilayahController@tambah');
 Route::post('backend/wilayah/tambah/proses','Backend\WilayahController@simpanTambah');
+
+// Organisasi
+Route::get('org/me', 'Frontend\OrganisasiController@eventSaya');
