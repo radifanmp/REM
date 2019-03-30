@@ -22,10 +22,11 @@ Route::post('/login','Frontend\LoginController@login');
 Route::get('/logout','Frontend\LoginController@logout');
 Route::post('/daftar','Frontend\LoginController@daftarAnggota');
 
-// Profil
+// Profil dan Ganti Password
 Route::get('/profil/edit','Frontend\ProfilController@editProfil');
 Route::get('/profil','Frontend\ProfilController@index');
 Route::post('/profil/edit/simpan','Frontend\ProfilController@simpanEdit');
+Route::get('/profil/gantipass','Frontend\ProfilController@gantipass');
 
 // Agama
 Route::get('/agama/kategori/{nama}','Frontend\AgamaController@Kategori');
@@ -40,3 +41,4 @@ Route::post('backend/wilayah/tambah/proses','Backend\WilayahController@simpanTam
 
 // Organisasi
 Route::get('org/me', 'Frontend\OrganisasiController@eventSaya');
+

@@ -24,7 +24,7 @@
               </tr>
               <tr>
                 <td style="font-weight:bold;"><i class="fas fa-key " style="font-size:20px;"></i>&nbsp;&nbsp;Password</td>
-                <td a href="#" style="color:#2962ff ">Change Password</a></td>
+                <td> <a href="/profil/gantipass" style="color:#2962ff ">Change Password</a></td>
               </tr>
               <tr>
                     <td style="font-weight:bold;"><i class="fas fa-arrow-circle-right " style="font-size:20px;"></i>&nbsp;&nbsp;Agama</td>
@@ -44,6 +44,10 @@
             </tr>
             </tbody>
           </table>
+
+          <div style="margin-bottom:50px;">
+
+          </div>
                 
 </div>
 
