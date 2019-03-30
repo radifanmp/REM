@@ -6,10 +6,11 @@
         
         <div class="row">
             <div class="col s6">
-                
+                <a href="">Buat Organisasi</a>
             </div>
-            <div class="col s6">
-
+            <div class="col s6" style="float:right">
+                <input type="search" placeholder="Cari Organisasi">
+                <button>Cari</button>
             </div>
         </div>
         
