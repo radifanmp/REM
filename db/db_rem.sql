@@ -1,5 +1,5 @@
 /*
-SQLyog Community v13.1.1 (64 bit)
+SQLyog Ultimate v13.1.1 (64 bit)
 MySQL - 10.1.37-MariaDB : Database - db_rem
 *********************************************************************
 */
@@ -85,6 +85,66 @@ CREATE TABLE `tb_hak_akses` (
 insert  into `tb_hak_akses`(`id`,`nama`,`is_deleted`) values 
 (1,'super-admin',NULL),
 (2,'user',NULL);
+
+/*Table structure for table `tb_organisasi` */
+
+DROP TABLE IF EXISTS `tb_organisasi`;
+
+CREATE TABLE `tb_organisasi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nama_organisasi` varchar(100) DEFAULT NULL,
+  `gambar_organisasi` varchar(255) DEFAULT NULL,
+  `id_agama` bigint(20) DEFAULT NULL,
+  `provinsi_id` bigint(20) DEFAULT NULL,
+  `nama_provinsi` varchar(50) DEFAULT NULL,
+  `kabupaten_id` bigint(20) DEFAULT NULL,
+  `nama_kabupaten` varchar(100) DEFAULT NULL,
+  `alamat_organisasi` text,
+  `desc_organisasi` text,
+  `created_date` timestamp NULL DEFAULT NULL,
+  `created_by` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+/*Data for the table `tb_organisasi` */
+
+insert  into `tb_organisasi`(`id`,`nama_organisasi`,`gambar_organisasi`,`id_agama`,`provinsi_id`,`nama_provinsi`,`kabupaten_id`,`nama_kabupaten`,`alamat_organisasi`,`desc_organisasi`,`created_date`,`created_by`) values 
+(1,'Majelis Nurul Ihsan','/img/grupdefault.png',NULL,3,'Jawa Barat',30,'Kabupaten Bogor','Jl. Merdeka Barat Timur Raya','ROHIS BOJONG KULUR','2019-03-30 16:51:26',6);
+
+/*Table structure for table `tb_organisasi_detail` */
+
+DROP TABLE IF EXISTS `tb_organisasi_detail`;
+
+CREATE TABLE `tb_organisasi_detail` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `id_organisasi` bigint(20) DEFAULT NULL,
+  `id_user` bigint(20) DEFAULT NULL,
+  `id_posisi` bigint(20) DEFAULT NULL,
+  `joined_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+/*Data for the table `tb_organisasi_detail` */
+
+insert  into `tb_organisasi_detail`(`id`,`id_organisasi`,`id_user`,`id_posisi`,`joined_date`) values 
+(1,1,6,1,'2019-03-30 17:06:56');
+
+/*Table structure for table `tb_posisi_organisasi` */
+
+DROP TABLE IF EXISTS `tb_posisi_organisasi`;
+
+CREATE TABLE `tb_posisi_organisasi` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+/*Data for the table `tb_posisi_organisasi` */
+
+insert  into `tb_posisi_organisasi`(`id`,`nama`) values 
+(1,'Pendiri'),
+(2,'Pengurus'),
+(3,'Anggota');
 
 /*Table structure for table `tb_setting` */
 

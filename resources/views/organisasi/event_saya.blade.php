@@ -8,7 +8,7 @@
             <div class="col s6">
                 <a href="">Buat Organisasi</a>
             </div>
-            <div class="col s6" style="float:right">
+            <div class="col s6" style="float:right"></div>
                 <input type="search" placeholder="Cari Organisasi">
                 <button>Cari</button>
             </div>
