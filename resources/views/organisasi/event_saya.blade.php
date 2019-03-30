@@ -25,11 +25,11 @@
             </div>
             </div>
         </div>
-        
-        @foreach ($data as $org)
-        
-        <div class="row">
-            <div class="col s6">
+        @if ($data)
+            @foreach ($data as $org)
+            
+            <div class="row">
+                <div class="col s6">
 
                 <div class="card">
                     <div class="card-content">
@@ -50,12 +50,18 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
+            </div>
+
+            @endforeach
+        @else
+        <div class="row">
+            <div class="col s12 center-align">
+                <img src="{{ $notfound }}" alt="Not Found">
             </div>
         </div>
-
-        @endforeach
+        @endif
 
     </div>
 

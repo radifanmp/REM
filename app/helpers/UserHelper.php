@@ -35,8 +35,17 @@ class UserHelper extends Helper {
 
     public static function getOrganisasiUser($id) {
         $data = OrganisasiDetail::where('id_user', $id)->get();
+        
+        if(!$data) {
+            return [];
+        }
+
         $dataOrg = ArrayHelper::getColumn($data, 'id_organisasi');
         
+        if(!$dataOrg) {
+            return [];
+        }
+
         $org = Organisasi::where('id',$dataOrg)->get();
         return $org;
     }
