@@ -74,4 +74,9 @@ class ProfilController extends BaseController {
             'data' => $data,
         ]);
     }
+
+
+    public function gantipass(){
+        return view('profil.gantipass');
+    }
 }
