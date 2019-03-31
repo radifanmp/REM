@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col s3">
 
-                <div style= "margin:15px;"><a href="/#/" class="waves-effect waves-light btn grey darken-3" style="border-radius:15px;">Buat Organisasi</a></div>
+                <div style= "margin:15px;"><a href="/org/add" class="waves-effect waves-light btn grey darken-3" style="border-radius:15px;">Buat Organisasi</a></div>
         
             </div>
 
