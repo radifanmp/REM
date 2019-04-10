@@ -6,9 +6,10 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 
-class User extends Model {
+class User extends Authenticatable {
     protected $table = "tb_user";
     protected $timestamp = false;
     public $timestamps = false;
