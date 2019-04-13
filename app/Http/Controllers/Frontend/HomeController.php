@@ -4,12 +4,13 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Frontend\BaseController;
 use App\models\Agama;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends BaseController {
 
     public function Index() {
         $dataAgama = Agama::all();
-        
+
         return view('home.index',[
             'dataAgama' => $dataAgama
         ]);
