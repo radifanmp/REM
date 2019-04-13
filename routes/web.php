@@ -40,5 +40,7 @@ Route::get('backend/wilayah/tambah','Backend\WilayahController@tambah');
 Route::post('backend/wilayah/tambah/proses','Backend\WilayahController@simpanTambah');
 
 // Organisasi
-Route::get('org/me', 'Frontend\OrganisasiController@eventSaya');
+Route::get('org/me', 'Frontend\OrganisasiController@organSaya');
+Route::get('org/add', 'Frontend\OrganisasiController@tambahOrgan');
+// Route::get('org/me', 'Frontend\OrganisasiController@eventSaya');
 

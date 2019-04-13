@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\models\User as UserModel;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Frontend\BaseController;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends BaseController {
     
@@ -26,6 +27,8 @@ class LoginController extends BaseController {
 
         // Set Session2 Untuk Identitas Login
         UserModel::setSessionUser($request->username);
+        $user = UserModel::where('username',$request->username)->first();
+        Auth::login($user);
         self::setAlert("Selamat","Anda Berhasil Login!","success");
 
         // Get Halaman Redirect Setelah Login
