@@ -43,7 +43,7 @@
                             </div>
 
                             <div class="col s8">
-                                <strong style="font-size: 20pt;">{{ $org->nama_organisasi }}</strong><br>
+                                <a href="#"><strong style="font-size: 20pt;">{{ $org->nama_organisasi }}</strong><br></a>
                                 <span><i class="material-icons prefix" style="font-size:small;">location_on</i>&nbsp;&nbsp; {{ $org->alamat_organisasi }}</span><br>
                                 <span><i class="material-icons prefix" style="font-size:small;">domain</i>&nbsp;&nbsp; Berdiri Sejak, {{ $dateHelper->convertDateIndo($org->created_date,['bulan','tahun']) }}</span><br>
                                 <span>{{ $org->nama_kabupaten }}, {{ $org->nama_provinsi }}</span>
